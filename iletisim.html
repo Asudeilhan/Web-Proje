@@ -8,7 +8,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
      <link rel="stylesheet" href="css/style.css">
-
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     
     
   </head>
   <body>
@@ -22,6 +23,7 @@
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
+              
               <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="giris.html">Giriş Yap</a>
               </li> 
@@ -38,7 +40,7 @@
                 <a class="nav-link" href="takimimiz.html">Takımımız</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link "  href="ilgialanlarım.html">İlgi Alanlarım</a>
+                <a class="nav-link " aria-current="page" href="ilgialanlarım.html">İlgi Alanlarım</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="iletisim.html">İletişim</a>
@@ -50,6 +52,36 @@
         </div>
       </nav>
       <!--Menü Kısmı Bitiş-->
+      <br><br><br>
+      <center><h3>İletişim Formu</h3></center>
+      <hr>
+      <div class="container mt-5">
+        <div class="row">
+          <div class=".col-sm-8.offset-sm-2"</div>
+          <form action="" method="get">
+            Adı*<br>
+            <input type="text" name="" id="ad" required><br>
+
+            Soyadı*<br>
+            <input type="text" name="" id="soyad" required><br>
+            
+            E-posta*<br>
+            <input type="email" name="" id="mail" required><br>
+
+            Cinsiyet*<br>
+            <input type="radio" name="cins" id="cinsiyet">Kadın<br>
+            <input type="radio" name="cins" id="cinsiyet">Erkek<br>
+
+            Telefon*<br>
+            <input type="text" name="" id="telefon" required ><br><br><br>
+
+            <button type="submit" class="btn btn-success" id="gonder" value="Gönder">Gönder</button>
+
+            <button type="submit" class="btn btn-success" id="temizle">Temizle</button><br><br><br>
+          </form>
+          
+        </div>
+      </div>
 
       
       
