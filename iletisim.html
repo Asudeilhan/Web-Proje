@@ -11,7 +11,9 @@
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
      
     
+ 
   </head>
+
   <body>
       <!-- Menü Kısmı Başlangıç-->
 
@@ -40,7 +42,7 @@
                 <a class="nav-link" href="takimimiz.html">Takımımız</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="ilgialanlarım.html">İlgi Alanlarım</a>
+                <a class="nav-link "  href="ilgialanlarım.html">İlgi Alanlarım</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="iletisim.html">İletişim</a>
@@ -52,37 +54,89 @@
         </div>
       </nav>
       <!--Menü Kısmı Bitiş-->
+     
       <br><br><br>
       <center><h3>İletişim Formu</h3></center>
       <hr>
-      <div class="container mt-5">
-        <div class="row">
-          <div class=".col-sm-8.offset-sm-2"</div>
-          <form action="" method="get">
+      
+     
+      <div class="container">
+     
+      
+      <div class="row">
+        <div class="col-md">
+
+          <form action="" method="get" id="userform">
             Adı*<br>
-            <input type="text" name="" id="ad" required><br>
-
+            <input type="text" name="adi" id="adi" value="" placeholder="Ad" required><br></div>
+            <div class="col-md">
             Soyadı*<br>
-            <input type="text" name="" id="soyad" required><br>
+            <input type="text" name="" id="soyad" placeholder="Soyad" required><br></div></div><br>
             
+            <div class="row">
+              <div class="col-md">
+      
+                Telefon*<br>
+                <input type="text" name="" id="telefon" placeholder="Telefon" required ><br></div>
+                <div class="col-md">
             E-posta*<br>
-            <input type="email" name="" id="mail" required><br>
+            <input type="email" name="" id="mail" placeholder="E-posta" required><br></div></div><br>
 
+            <div class="row">
+              <div class="col-md">
+      
             Cinsiyet*<br>
             <input type="radio" name="cins" id="cinsiyet">Kadın<br>
-            <input type="radio" name="cins" id="cinsiyet">Erkek<br>
+            <input type="radio" name="cins" id="cinsiyet">Erkek<br></div>
 
-            Telefon*<br>
-            <input type="text" name="" id="telefon" required ><br><br><br>
+          
+            <div class="col-md">
+            Doğum Yeri*<br>
+            <select name="">
+              <option>Bir Şehir Seçiniz</option>
+              <option value="a1">İstanbul</option>
+              <option value="a2">Kırıkkale</option>
+              <option value="a3">Kırşehir</option>
+              <option value="a4">Ankara</option>
+             </select><br>
+            </div></div><br>
+            <div class="row">
+              <div class="col-md">
+      
+             Hobiler*<br>
+             <input name="" type="checkbox" value="Sinema">Sinema
+             <input name="" type="checkbox" value="Sinema">Kitap 
+             <input name="" type="checkbox" value="Sinema">Resim
+             <input name="" type="checkbox" value="Sinema">Müzik
+             <input name="" type="checkbox" value="Sinema">Oyun
+             <br><br><br></div>
 
+
+             <div class="col-md">
             <button type="submit" class="btn btn-success" id="gonder" value="Gönder">Gönder</button>
 
-            <button type="submit" class="btn btn-success" id="temizle">Temizle</button><br><br><br>
+            <button type="reset" class="btn btn-success" id="temizle">Temizle</button><br><br><br>
+             </div></div>
           </form>
+         
           
         </div>
       </div>
+</div>
+</div>
 
+
+
+     
+<script>
+  function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
+  </script>
       
       
 
@@ -90,6 +144,12 @@
 
 
 
+<div class="bg-dark text-light text-center">
+  <p class="align-middle p-5 mb-0">
+    <span>Web Sitesi &copy; | 2022 </span><br>
+    <span>Designed by<b>Asude İlhan</b></span>
+  </p>
+</div>
 
 
 
