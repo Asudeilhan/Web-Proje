@@ -10,6 +10,43 @@
      <link rel="stylesheet" href="css/style.css">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
      
+     <style>
+
+      Body
+      
+      {  
+      
+      background-color: #fff;
+      
+      font-family: Calibri;
+      
+      }
+      
+      h1 {
+      
+      font-weight:bold;
+      
+      color: #4682B4;
+      
+      text-align: center;
+      
+      }
+      
+      table {
+      
+      color: white;
+      
+      font-size: 15px;
+      
+      font-weight: bold;
+      
+      background-color: #696969;
+      
+      border-collapse: collapse;
+      
+      border: 2px solid black;
+      
+        }</style>      
     
  
   </head>
@@ -54,95 +91,132 @@
         </div>
       </nav>
       <!--Menü Kısmı Bitiş-->
-     
+      <!--İletişim formu kısmı başlangıç-->
       <br><br><br>
-      <center><h3>İletişim Formu</h3></center>
-      <hr>
       
+<center><h3>İletişim Formu</h3></center>
+<hr>
+
+            <form name="myform" method="post" action="iletisim.php" onSubmit="return validate()">
+
+                        <table align="center" cellpadding="10">
+
+            <!——— First Name ——>
+
+                        <tr>
+
+                                    <td> İsim </td>
+
+                                    <td> <input type="text" name="fname" maxlength="30"/></td>
+
+                                    </tr>
+
+<!——— Last Name ——>
+
+            <tr>
+
+                        <td> Soyisim </td>
+
+                        <td> <input type="text" name="lname" maxlength="30"/></td>
+
+            </tr>             
+
+<!———DOB ——>
+                                   
+
+<!——— Email ID ——>
+
+            <tr>
+
+                        <td> Email </td>
+
+                        <td> <input type="text" name="email" maxlength="100"/></td>
+
+            </tr>
+
+
+
+<!——— Gender radio button——>
+
+            <tr>
+
+                        <td> Cinsiyet </td>
+
+                        <td>Erkek<input type="radio" name="gender" value="Erkek"/>
+
+                                    Kadın<input type="radio" name="gender" value="Kadın"/></td>
+
+                        </tr>
+
+<!——— Address ——>
+
+            <tr>
+
+                        <td>Adres</td>
+
+                        <td><textarea name="address" placeholder="Adresinizi giriniz" cols="50"></textarea></td>
+
+            </tr>             
+
+<!——— State select tag——>
+
+            <tr>
+
+                        <td>Şehir</td>
+
+                        <td>
+
+<select id="state" name="state">
+
+                        <option value="Select a state">Bir şehir seçiniz</option>
+
+                        <option value="Kırıkkale">Kırıkkale</option>
+
+                        <option value="Kırşehir">Kırşehir</option>
+
+                        <option value="Ankara">Ankara</option>
+
+                        <option value="İstanbul">İstanbul</option>
+
+                        </select>
+
+                        </td>
+
+            </tr>
+
+<!——— Country——>
+
+<tr>
+
+                        <td> Ülke</td>
+
+                        <td> <input type="text" value="Türkiye" name="country" readonly="readonly"/></td>
+
+            </tr>
+
+
+
+<!—- Submit——->
+
+<tr>
+
+                        <td colspan="2" align="center">
+
+                        <input type="submit" name="submit" value="Gönder"/>
+
+                        </td>
+
+            </tr>
+
+</table>
+
+</form>
+      <!--İletişim formu kısmı bitiş-->
      
-      <div class="container">
-     
-      
-      <div class="row">
-        <div class="col-md">
-
-          <form action="" method="get" id="userform">
-            Adı*<br>
-            <input type="text" name="adi" id="adi" value="" placeholder="Ad" required><br></div>
-            <div class="col-md">
-            Soyadı*<br>
-            <input type="text" name="" id="soyad" placeholder="Soyad" required><br></div></div><br>
-            
-            <div class="row">
-              <div class="col-md">
-      
-                Telefon*<br>
-                <input type="text" name="" id="telefon" placeholder="Telefon" required ><br></div>
-                <div class="col-md">
-            E-posta*<br>
-            <input type="email" name="" id="mail" placeholder="E-posta" required><br></div></div><br>
-
-            <div class="row">
-              <div class="col-md">
-      
-            Cinsiyet*<br>
-            <input type="radio" name="cins" id="cinsiyet">Kadın<br>
-            <input type="radio" name="cins" id="cinsiyet">Erkek<br></div>
-
-          
-            <div class="col-md">
-            Doğum Yeri*<br>
-            <select name="">
-              <option>Bir Şehir Seçiniz</option>
-              <option value="a1">İstanbul</option>
-              <option value="a2">Kırıkkale</option>
-              <option value="a3">Kırşehir</option>
-              <option value="a4">Ankara</option>
-             </select><br>
-            </div></div><br>
-            <div class="row">
-              <div class="col-md">
-      
-             Hobiler*<br>
-             <input name="" type="checkbox" value="Sinema">Sinema
-             <input name="" type="checkbox" value="Sinema">Kitap 
-             <input name="" type="checkbox" value="Sinema">Resim
-             <input name="" type="checkbox" value="Sinema">Müzik
-             <input name="" type="checkbox" value="Sinema">Oyun
-             <br><br><br></div>
-
-
-             <div class="col-md">
-            <button type="submit" class="btn btn-success" id="gonder" value="Gönder">Gönder</button>
-
-            <button type="reset" class="btn btn-success" id="temizle">Temizle</button><br><br><br>
-             </div></div>
-          </form>
-         
-          
-        </div>
-      </div>
-</div>
-</div>
-
-
-
-     
-<script>
-  function validateForm() {
-    let x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-      alert("Name must be filled out");
-      return false;
-    }
-  }
-  </script>
-      
       
 
 
-
-
+<br><br>
 
 <div class="bg-dark text-light text-center">
   <p class="align-middle p-5 mb-0">
@@ -150,6 +224,136 @@
     <span>Designed by<b>Asude İlhan</b></span>
   </p>
 </div>
+ <!--javascript kısmı başlangıç-->
+ <script>
+
+  function validate()
+  
+  {
+  
+              var first= document.forms["myform"]["fname"].value;
+  
+              var last= document.forms["myform"]["lname"].value;
+  
+
+  
+              var email= document.forms["myform"]["email"].value;
+  
+              
+  
+              var gender= document.forms["myform"]["gender"].value;
+  
+              var address = document.forms["myform"]["address"].value;
+  
+              var state= document.forms["myform"]["state"].value;
+  
+             
+  
+  // first name validation
+  
+  if(first == "")
+  
+              {
+  
+  alert("İsminizi giriniz");
+  
+              return false;
+  
+              }
+  
+  if(!isNaN(first))
+  
+              {
+  
+              alert("name should be in character");
+  
+              return false;
+  
+              }
+  
+  //last name validation
+  
+  if(last == "")
+  
+              {
+  
+              alert("Soyadınızı giriniz");
+  
+              return false;  }
+  
+  if(!isNaN(last))
+  
+              {
+  
+              alert("name should be in character");
+  
+              return false;
+  
+              }
+  
+  // DOB validation
+  
+ 
+  // email validation
+  
+  var at = email.indexOf("@");
+  
+  var dot = email.lastIndexOf(".");
+  
+  if(at<1||dot<at+2||dot+2 >= email.lenght)
+  
+              {
+  
+              alert("E-mailinizi giriniz");
+  
+              return false;
+  
+              }
+  
+ 
+  
+  //gender radio validation
+  
+  if(gender=="")
+  
+  {
+  
+  alert("Cinsiyetinizi seçiniz");
+  
+  return false;
+  
+  }
+  
+  // address validation
+  
+  if(address == "")
+  
+              {
+  
+              alert("Adresinizi giriniz");
+  
+              return false;
+  
+              }
+  
+  // state validation
+  
+  if(state=="Select a state")
+  
+              {
+  
+              alert("Şehrinizi giriniz");
+  
+              return false;
+  
+              }
+  
+  // hobbies validation
+  
+
+             } </script>
+      <!--javascript kısmı bitiş-->
+
 
 
 

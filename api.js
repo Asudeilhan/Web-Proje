@@ -6,10 +6,7 @@ const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
 
 const genres = [
-    {
-      "id": 28,
-      "name": "Aksiyon"
-    },
+ 
     {
       "id": 12,
       "name": "Macera"
@@ -18,10 +15,7 @@ const genres = [
       "id": 16,
       "name": "Animasyon"
     },
-    {
-      "id": 35,
-      "name": "Komedi"
-    },
+ 
     {
       "id": 80,
       "name": "Gizem"
@@ -62,7 +56,7 @@ var currentPage = 1;
 var nextPage = 2;
 var prevPage = 3;
 var lastUrl = '';
-var totalPages = 100;
+var totalPages = 5;
 
 var selectedGenre = []
 setGenre();
@@ -200,39 +194,6 @@ function showMovies(data) {
 
 const overlayContent = document.getElementById('overlay-content');
 /* Open when someone clicks on the span element */
-function openNav(movie) {
-  let id = movie.id;
-  fetch(BASE_URL + '/movie/'+id+'/videos?'+API_KEY).then(res => res.json()).then(videoData => {
-    console.log(videoData);
-    if(videoData){
-      document.getElementById("myNav").style.width = "100%";
-      if(videoData.results.length > 0){
-        var embed = [];
-        var dots = [];
-        videoData.results.forEach((video, idx) => {
-          let {name, key, site} = video
-
-          
-        })
-        
-        var content = `
-        <h1 class="no-results">${movie.original_title}</h1>
-        <br/>
-        
-        ${embed.join('')}
-        <br/>
-        <div class="dots">${dots.join('')}</div>
-        
-        `
-        overlayContent.innerHTML = content;
-        activeSlide=0;
-        showVideos();
-      }else{
-        overlayContent.innerHTML = `<h1 class="no-results">No Results Found</h1>`
-      }
-    }
-  })
-}
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
@@ -301,31 +262,4 @@ function getColor(vote) {
 }
 
 
-prev.addEventListener('click', () => {
-  if(prevPage > 0){
-    pageCall(prevPage);
-  }
-})
 
-next.addEventListener('click', () => {
-  if(nextPage <= totalPages){
-    pageCall(nextPage);
-  }
-})
-
-function pageCall(page){
-  let urlSplit = lastUrl.split('?');
-  let queryParams = urlSplit[1].split('&');
-  let key = queryParams[queryParams.length -1].split('=');
-  if(key[0] != 'page'){
-    let url = lastUrl + '&page='+page
-    getMovies(url);
-  }else{
-    key[1] = page.toString();
-    let a = key.join('=');
-    queryParams[queryParams.length -1] = a;
-    let b = queryParams.join('&');
-    let url = urlSplit[0] +'?'+ b
-    getMovies(url);
-  }
-}
