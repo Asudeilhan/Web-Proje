@@ -1,0 +1,69 @@
+.resimslider{
+    height:250px;
+    width: 200px;
+}
+.tableborder {
+    border: 0.5px solid;
+    border-color: white;  
+}
+.rightimg{
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 30%;
+}
+.leftimg{
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 30%;
+}
+.a{
+    margin: auto;
+}
+.x{
+    width: 200px;
+    height: 200px;
+}
+.ibeyaz{
+    color: #000;;
+    position:relative;
+    top:-48px;
+    font-size:40px;
+}
+.boyut{
+    width: 300px;
+    height: 300px;
+}
+.ortala{
+    position: relative;
+    top:+80px;
+
+}
+.ayrac{
+    color:#000
+}
+
+.yazi{
+    text-align: left;
+}
+.resim{
+    width:400px;
+    height:300px;
+
+}
+.konum{
+    text-align: left;
+
+}
+    
+.form1{
+    width: 610px;
+    height: 450px;
+    margin:60px auto;
+    padding:100px 0 0 40px;
+}
+.ozellik{
+          font: 12px tahoma;
+}
+
