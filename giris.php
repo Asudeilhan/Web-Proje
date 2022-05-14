@@ -13,7 +13,7 @@ if(isset($_POST['submit']))
        
        echo ("Hoşgeldiniz ``g211210040´´");
       echo"<br>"  ;
-       echo '<a href="hakkimda.html"> Ana sayfaya geri dön </a>';
+       echo '<a href="index.html"> Ana sayfaya geri dön </a>';
      }
        
       
